@@ -1,9 +1,12 @@
 {
-  "name": "MakudesUI",
-  "version": "0.0.1",
-  "description": "MakudesUI ",
-  "main": "index.js",
-  "repository": "https://github.com/markWIMPER/MakduesUI.git",
-  "author": "markWIMPER <cc947331424@icloud.com>",
-  "license": "MIT"
+	"name": "makdues-ui",
+	"version": "0.0.1",
+	"description": "MakudesUI ",
+	"main": "index.js",
+	"repository": "https://github.com/markWIMPER/MakduesUI.git",
+	"author": "markWIMPER <cc947331424@icloud.com>",
+	"license": "MIT",
+	"dependencies": {
+		"vue": "^3.2.37"
+	}
 }
