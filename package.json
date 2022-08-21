@@ -7,6 +7,6 @@
 	"author": "markWIMPER <cc947331424@icloud.com>",
 	"license": "MIT",
 	"dependencies": {
-		"vue": "^3.2.37"
+		"vue": "2.5.16"
 	}
 }
