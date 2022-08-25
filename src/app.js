@@ -4,7 +4,9 @@
  * @Description: app 主入口文件
  */
 import Vue from 'vue';
+import Button from '../src/button.vue';
+Vue.component('m-button', Button);
 
 new Vue({
-	el: '#aapp'
+	el: '#app'
 });

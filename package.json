@@ -7,9 +7,17 @@
 	"author": "markWIMPER <cc947331424@icloud.com>",
 	"license": "MIT",
 	"dependencies": {
-		"vue": "2.5.16"
+		"ue": "^0.0.0",
+		"vue": "2.6.10",
+		"vue-hot-reload-api": "^2.3.4"
 	},
 	"devDependencies": {
-		"parcel-bundler": "^1.12.5"
+		"@vue/component-compiler-utils": "^3.3.0",
+		"parcel-bundler": "^1.12.5",
+		"sass": "^1.54.5",
+		"vue-template-compiler": "2.6.10"
+	},
+	"alias": {
+		"vue": "./node_modules/vue/dist/vue.common.js"
 	}
 }

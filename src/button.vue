@@ -4,12 +4,7 @@
 	</div>
 </template>
 <script>
-export default {
-	name: '',
-	template: `
-    <button class="m-button">Mark</button>
-  `
-};
+export default {};
 </script>
 <style lang="scss">
 .m-button {
