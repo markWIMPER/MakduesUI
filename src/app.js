@@ -6,8 +6,10 @@
 import Vue from 'vue';
 import Button from '../src/component/button.vue';
 import Icon from '../src/component/icon.vue';
+import ButtonGroup from '../src/component/button-group.vue';
 Vue.component('m-button', Button);
 Vue.component('m-icon', Icon);
+Vue.component('m-button-group', ButtonGroup);
 new Vue({
 	el: '#app',
 	data: {
