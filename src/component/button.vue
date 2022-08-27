@@ -7,8 +7,9 @@
 <template>
 	<!-- todo 重复性代码优化 -->
 	<!-- iconPosition 依据传入的值进行调用clss属性 -->
-	<button class="m-button" :class="{ [`icon-${iconPosition}`]: true }">
-		<m-icon class="icon" v-if="icon" :name="icon"></m-icon>
+	<button class="m-button" :class="{ [`icon-${iconPosition}`]: true }" @click="clickEvent">
+		<m-icon class="icon" v-if="icon && !loading" :name="icon"></m-icon>
+		<m-icon class="icon loading" v-if="loading" name="loading"></m-icon>
 		<div class="content">
 			<slot></slot>
 		</div>
@@ -19,6 +20,10 @@ export default {
 	// props: ['icon', 'iconPosition']
 	props: {
 		icon: {},
+		loading: {
+			type: Boolean,
+			default: false
+		},
 		iconPosition: {
 			type: String,
 			default: 'left',
@@ -26,10 +31,23 @@ export default {
 				return !(value !== 'left' && value !== 'right'); //异常约束
 			}
 		}
+	},
+	methods: {
+		clickEvent() {
+			this.$emit('click');
+		}
 	}
 };
 </script>
 <style lang="scss">
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
 .m-button {
 	font-size: var(--font-size);
 	height: var(--button-height);
@@ -68,6 +86,9 @@ export default {
 			margin-right: 0;
 			margin-left: 0.1em;
 		}
+	}
+	.loading {
+		animation: spin 1s infinite ease-out;
 	}
 }
 </style>
