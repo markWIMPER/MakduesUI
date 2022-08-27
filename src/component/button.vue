@@ -8,9 +8,7 @@
 	<!-- todo 重复性代码优化 -->
 	<!-- iconPosition 依据传入的值进行调用clss属性 -->
 	<button class="m-button" :class="{ [`icon-${iconPosition}`]: true }">
-		<svg v-if="icon" class="icon">
-			<use :xlink:href="`#i-${icon}`"></use>
-		</svg>
+		<m-icon class="icon" v-if="icon" :name="icon"></m-icon>
 		<div class="content">
 			<slot></slot>
 		</div>
@@ -18,7 +16,17 @@
 </template>
 <script>
 export default {
-	props: ['icon', 'iconPosition']
+	// props: ['icon', 'iconPosition']
+	props: {
+		icon: {},
+		iconPosition: {
+			type: String,
+			default: 'left',
+			validator: value => {
+				return !(value !== 'left' && value !== 'right'); //异常约束
+			}
+		}
+	}
 };
 </script>
 <style lang="scss">

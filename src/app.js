@@ -4,9 +4,10 @@
  * @Description: app 主入口文件
  */
 import Vue from 'vue';
-import Button from '../src/button.vue';
+import Button from '../src/component/button.vue';
+import Icon from '../src/component/icon.vue';
 Vue.component('m-button', Button);
-
+Vue.component('m-icon', Icon);
 new Vue({
 	el: '#app'
 });
