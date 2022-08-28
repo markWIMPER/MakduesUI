@@ -3,6 +3,10 @@
 	"version": "0.0.1",
 	"description": "MakudesUI ",
 	"main": "index.js",
+	"scripts": {
+		"dev-test": "parcel watch test/* --no-cache && karma start",
+		"test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
+	},
 	"repository": "https://github.com/markWIMPER/MakduesUI.git",
 	"author": "markWIMPER <cc947331424@icloud.com>",
 	"license": "MIT",
@@ -13,10 +17,19 @@
 	},
 	"devDependencies": {
 		"@vue/component-compiler-utils": "^3.3.0",
-		"chai": "^4.3.6",
+		"chai": "^4.1.2",
 		"chai-spies": "^1.0.0",
+		"karma": "^6.4.0",
+		"karma-chai": "^0.1.0",
+		"karma-chai-spies": "^0.1.4",
+		"karma-chrome-launcher": "^3.1.1",
+		"karma-mocha": "^2.0.1",
+		"karma-sinon-chai": "^2.0.2",
+		"mocha": "^10.0.0",
 		"parcel-bundler": "^1.12.5",
 		"sass": "^1.54.5",
+		"sinon": "^14.0.0",
+		"sinon-chai": "^3.7.0",
 		"vue-template-compiler": "2.6.10"
 	},
 	"alias": {
