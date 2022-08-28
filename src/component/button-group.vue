@@ -28,9 +28,9 @@ export default {
 	vertical-align: middle;
 	> .m-button {
 		border-radius: 0;
-		// &:not(:first-child) {
-		// 	border-left: none;
-		// }
+		&:not(:first-child) {
+			margin-left: -1px;
+		}
 		margin-left: -1px;
 		&:first-child {
 			border-top-left-radius: var(--border-radius);
