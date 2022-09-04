@@ -1,6 +1,6 @@
 {
 	"name": "makdues-ui-1",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "MakudesUI ",
 	"main": "dist/index.js",
 	"scripts": {
