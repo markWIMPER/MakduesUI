@@ -2,10 +2,11 @@
 	"name": "makdues-ui-1",
 	"version": "0.0.1",
 	"description": "MakudesUI ",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"scripts": {
 		"dev-test": "parcel watch test/* --no-cache & karma start",
-		"test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
+		"test": "parcel build test/* --no-cache --no-minify && karma start --single-run",
+		"build": "parcel build index.js --no-cache --no-minify"
 	},
 	"repository": "https://github.com/markWIMPER/MakduesUI.git",
 	"author": "markWIMPER <cc947331424@icloud.com>",

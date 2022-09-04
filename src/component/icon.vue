@@ -10,7 +10,12 @@
 </template>
 <script>
 export default {
-	props: ['name']
+	props: {
+		name: {
+			type: 'string',
+			default: 'default'
+		}
+	}
 };
 </script>
 <style lang="scss" scoped>
